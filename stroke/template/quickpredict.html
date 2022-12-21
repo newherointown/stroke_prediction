@@ -1,0 +1,212 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+
+    <br> <br><br> <br>
+    <h2 class="container center" style="color:#053568;"> Stroke Data Form </h2>
+<!--    <p class="stroke center"style="font-size:1vw;"> This form demands the general and medical information <br>from you.-->
+<!--      Few field are field in binary form like 1 or 0.<br>The rest are filled according to the-->
+<!--      requirements<br> mentioned below every field.</p>>-->
+<BR><BR>
+    <div class="row">
+        <div class="col s4 m4 l4 offset-s4 offset-l4 offset-m4"> <hr></div> <br> <br> <br>
+      </div>
+
+
+    <br><br><br>
+     <!--  form -->
+
+  <div style="width: 50%;" class="row ">
+    <form class="col s12" method="POST">
+      <h6 class=""style="color:#053568;"><b>GENERAL INFO</b></h6>
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.age }}
+          <label for="a1">Age</label>
+          <span class="helper-text">Enter your age in number from 0 to onward</span>
+        </div>
+      </div>
+      <BR><BR>
+      <h6 class=""style="color:#053568;"><b>PREVIOUS DISEASE INFO</b></h6>
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.hypertension }}
+          <label for="a2">Hypertension</label>
+          <span class="helper-text">Enter 1 or 0 if you have hypertension or not respectively</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.heartdisease }}
+          <label for="a3">Heart-disease</label>
+          <span class="helper-text">Enter 1 or 0 if you have heart disease or not respectively</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.avgglucoselevel }}
+          <label for="a4">Avg-Glucose-level</label>
+          <span class="helper-text">Enter your avg glucose level here</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.bmi }}
+          <label for="a5">BMI</label>
+          <span class="helper-text">Enter your BMI here</span>
+        </div>
+      </div>
+<BR><BR>
+
+      <h6 class=""style="color:#053568;"><b> GENDER DETAIL SECTION</b></h6>
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.genderMale }}
+          <label for="a6">Male</label>
+          <span class="helper-text">Enter 1 if your gender is male other-wise 0</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.genderOther }}
+          <label for="a7">Other</label>
+          <span class="helper-text">Enter 1 if your gender is other or just type 0</span>
+        </div>
+      </div>
+
+      <BR><BR>
+      <h6 class=""style="color:#053568;"><b>MARRIED INFO</b></h6>
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.evermarriedYes }}
+          <label for="a8">Married or Unmarried</label>
+          <span class="helper-text">Enter 1 if you ever got married otherwise 0</span>
+        </div>
+      </div>
+
+      <BR><BR>
+      <h6 class=""style="color:#053568;"><b>WORK INFO</b></h6>
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.worktypeNeverworked }}
+          <label for="a9">Never worked</label>
+          <span class="helper-text">Enter 1 if you have never worked otherwise 0</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.worktypePrivate }}
+          <label for="a10">Private</label>
+          <span class="helper-text">Enter 1 if you have worked private otherwise 0</span>
+        </div>
+      </div>
+
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.worktypeSelfemployed }}
+          <label for="a11">Self-employed</label>
+          <span class="helper-text">Enter 1 if you are self-employed otherwise 0</span>
+        </div>
+      </div>
+
+      
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.worktypechildren }}
+          <label for="a12">Children</label>
+          <span class="helper-text">Enter 1 if you are children otherwise 0</span>
+        </div>
+      </div>
+
+
+      <BR><BR>
+      <h6 class=""style="color:#053568;"><b>RESIDENCE INFO</b></h6>
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.ResidencetypeUrban }}
+          <label for="a13">Urban</label>
+          <span class="helper-text">Enter 1 if your Residence type is urban otherwise 0</span>
+        </div>
+      </div>
+
+
+      <BR><BR>
+      <h6 class=""style="color:#053568;"><b>SMOKING INFO</b></h6>
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.smokingstatusformerlysmoked }}
+          <label for="a13">Formerly Smoked</label>
+          <span class="helper-text">Enter 1 if you smoked formely otherwise 0</span>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.smokingstatusneversmoked }}
+          <label for="a13">Never-smoked</label>
+          <span class="helper-text">Enter 1 if you have never smoked otherwise 0</span>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="input-field col s12 ">
+          <i class="material-icons prefix" style="color:#053568;">directions</i>
+          {{ form.smokingstatussmokes }}
+          <label for="a13">smokes</label>
+          <span class="helper-text">Enter 1 if you smoke regularly otherwise 0</span>
+        </div>
+      </div>
+      
+      
+      <BR>
+      {% csrf_token %}
+      <button class=" blue darken-3 btn waves-effect waves-light" type="submit" name="action"  > Test Now
+        <i class="material-icons right">send</i>
+      </button>
+
+
+    </form>
+      
+        
+  </div>
+
+  <br>
+
+  {% endblock %}

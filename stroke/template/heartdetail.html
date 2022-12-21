@@ -1,0 +1,98 @@
+{% extends 'base_layout2.html' %}
+{% block css %}
+<style> 
+    footer {
+        padding-left: 295px;
+    }
+    .con{
+        padding-left: 390px;
+        width: 90%;
+        flex: 1 0 auto;
+    }
+    @media only screen and (max-width : 992px) {
+      .con, footer {
+        padding-left: 0;
+      }
+    }
+
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+
+
+ </style>
+{% endblock %}
+{% block content %}
+
+
+
+<div class="con">
+  <h5 > Here is the record of your previous Prediction of Stroke  </h5>
+
+   
+<br> <br> 
+
+
+  <table class="striped">
+   <thead>
+     <tr>
+         <th>S.No</th>
+         <th>Age</th>
+         <th>Hypertension</th>
+         <th>Heart Disease</th>
+         <th>Avg glucose level</th>
+         <th>Bmi</th>
+         <th>Gender Male</th>
+         <th>Gender Other</th>
+         <th>Ever married Yes</th>
+         <th>work type Never worked</th>
+         <th>work type Private</th>
+         <th>work type Self Employed</th>
+         <th>work type Children</th>
+         <th>Residence type Urban</th>
+         <th>smoking status formerly smoked</th>
+         <th>smoking status never smoked</th>
+         <th>smoking status smokes</th>
+         <th>Probabilty</th>
+     </tr>
+   </thead>
+
+   <tbody>
+     {% for data in record_data %}
+     <tr>
+       <td>{{ forloop.counter }}</td>
+       <td>{{ data.age }}</td>
+       <td>{{ data.hypertension }}</td>
+       <td>{{ data.heartdisease }}</td>
+       <td>{{ data.avgglucoselevel }}</td>
+       <td>{{ data.bmi }}</td>
+       <td>{{ data.genderMale }}</td>
+       <td>{{ data.genderOther }}</td>
+       <td>{{ data.evermarriedYes }}</td>
+       <td>{{ data.worktypeNeverworked }}</td>
+       <td>{{ data.worktypePrivate }}</td>
+       <td>{{ data.worktypeSelfemployed }}</td>
+       <td>{{ data.worktypechildren }}</td>
+       <td>{{ data.ResidencetypeUrban }}</td>
+       <td>{{ data.smokingstatusformerlysmoked }}</td>
+       <td>{{ data.smokingstatusneversmoked }}</td>
+       <td>{{ data.smokingstatussmokes }}</td>
+       <td>{{ data.probability }}</td>
+       
+     </tr>
+     {% endfor %}
+     
+   </tbody>
+ </table>
+       
+
+
+ 
+</div>
+
+
+
+
+{% endblock %}

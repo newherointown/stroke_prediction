@@ -1,0 +1,89 @@
+{% extends 'base_layout2.html' %}
+{% block css %}
+<style> 
+    footer {
+        padding-left: 295px;
+    }
+    .con{
+        padding-left: 390px;
+        width: 90%;
+        flex: 1 0 auto;
+    }
+    @media only screen and (max-width : 992px) {
+      .con, footer {
+        padding-left: 0;
+      }
+    }
+
+    body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    }
+
+
+ </style>
+{% endblock %}
+{% block content %}
+<div class="con">
+  <h5 style="color:#053568;"> Here is the list of best Doctors and Hospitals for Stroke predicts in SPS. Please use the following information to get in touch.  </h5>
+  
+
+
+   
+<br>  
+
+
+  <table class="striped">
+   <thead>
+     <tr>
+         <th style="color:#053568;">S.No</th>
+         <th style="color:#053568;">Doctor Name</th>
+         <th style="color:#053568;">Hospital Name</th>
+         <th style="color:#053568;">Email</th>
+         <th style="color:#053568;">Location</th>
+         <th style="color:#053568;">Phone</th>
+       
+         <th style="color:#053568;"> Action</th>
+     </tr>
+   </thead>
+
+   <tbody >
+     {% for data in datas %}
+     <tr>
+       <td style="color: #7A8FA4">{{ forloop.counter }}</td>
+       <td style="color: #7A8FA4">{{ data.doctor_name }}</td>
+       <td style="color: #7A8FA4">{{ data.hospital_name }}</td>
+
+       <td style="color: #7A8FA4">{{ data.email }}</td>
+       <td style="color: #7A8FA4">{{ data.Location }}</td>
+       <td style="color: #7A8FA4">{{ data.phone_no }}</td>
+      
+       <td>
+
+         <a class=" blue darken-3 btn waves-effect waves-light"  href="https://mail.google.com/mail/?view=cm&fs=1&to={{ data.email }}" target="_blank"><i class="material-icons left">mail</i>Email Now</a>
+      </td>
+     </tr>
+
+
+   
+
+    {% endfor %}
+
+
+
+
+
+  
+
+
+
+     
+   </tbody>
+ </table>
+       
+
+<br> <br> 
+ 
+</div>  
+{% endblock %}

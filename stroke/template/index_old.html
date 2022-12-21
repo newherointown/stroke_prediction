@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Stroke Prediction</h2>
+
+<div>
+   <form action="" method="post">
+      {% csrf_token %}
+    <input type="number" placeholder="age" name="age" >
+    <input type="number" placeholder="hypertension" name="hypertension" >
+    <input type="number" placeholder="heart_disease" name="heart_disease" >
+    <input type="number" placeholder="avg_glucose_level" name="avg_glucose_level" >
+    <input type="number" placeholder="bmi" name="bmi">
+    <input type="number" placeholder="gender_Male" name="gender_Male" >
+    <input type="number" placeholder="gender_Other" name="gender_Other" >
+    <input type="number" placeholder="ever_married_Yes" name="ever_married_Yes" >
+    <input type="number" placeholder="work_type_Never_worked" name="work_type_Never_worked" >
+    <input type="number" placeholder="work_type_Private" name="work_type_Private" >
+    <input type="number" placeholder="work_type_Self-employed" name="work_type_Self-employed">
+    
+    <input type="number" placeholder="work_type_children" name="work_type_children">
+    <input type="number" placeholder="Residence_type_Urban" name="Residence_type_Urban">
+    <input type="number" placeholder="smoking_status_formerly smoked" name="smoking_status_formerly">
+    <input type="number" placeholder="smoking_status_never smoked" name="smoking_status_never">
+    <input type="number" placeholder="smoking_status_smokes" name="smoking_status_smokes">
+    <button name="btn" type="submit">Submit</button>
+   </form>
+</div>
+<br>
+<br>
+{{ prediction_text }}
+</body>
+</html>
